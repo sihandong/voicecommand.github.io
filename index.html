@@ -17,7 +17,7 @@ $("#control").click(function() {
 
   var r = document.getElementById('result');
   startConverting();
-  
+
       function startConverting () {
         if('webkitSpeechRecognition' in window){
           var speechRecognizer = new webkitSpeechRecognition();
@@ -138,6 +138,7 @@ $("#control").click(function() {
 <body>
 <p>
 <input type="button" value="click to use voice command" id="control" ><br>
+<div id = "result"></div>
 <span class="simulation">simulation</span><input type="text" id="command" class="simulation"><br>
 <input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
 
@@ -188,6 +189,10 @@ Expenses as material breeding insisted building to in. Continual so distrusts pr
   }
   .control{
     font-size: 6em;
+  }
+  #result{
+    height : 100px;
+    border : 1px solid #ccc;
   }
   
 </style>
