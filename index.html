@@ -22,9 +22,14 @@ $("#catbutton").click(function() {
  	console.log(potentialcommand);
 
   if (potentialcommand == "scroll down"){
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()-150
+    }, 1000);
     console.log("scroll");
   } else if (potentialcommand =="scroll up"){
-
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()+150
+    }, 1000);
   } else if (potentialcommand =="click Google"){
     $("html").load("www.google.com");
     console.log("google");
