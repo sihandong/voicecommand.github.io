@@ -23,7 +23,7 @@ $("#catbutton").click(function() {
   var commandarray = $.makeArray(potentialcommand);
   var foodornot = jQuery.inArray("food", commandarray);
   console.log(foodornot);
-  var textentry = potentialcommand;
+  
 
   if (potentialcommand == "scroll up"){
     $('html, body').animate({
@@ -37,8 +37,8 @@ $("#catbutton").click(function() {
   } else if (potentialcommand =="click Google"){
     $("html").load("www.google.com");
     console.log("google");
-  } else if (potentialcommand =="enter chicken nugget"){
-    $("#nugget").val("chicken nugget");
+  } else if (foodornot ==0){
+    $("#nugget").val(potentialcommand);
   } else if (potentialcommand =="scroll up"){
 
   }
