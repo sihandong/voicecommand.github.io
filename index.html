@@ -47,7 +47,7 @@ $("#control").click(function() {
 
   })
 
- $("#commandbutton").click(function() {
+ //$("#commandbutton").click(function() {
  	var potentialcommand = $("#command").val();
 
  	console.log(potentialcommand);
@@ -60,12 +60,12 @@ $("#control").click(function() {
   console.log(foodornot);
   
 
-  if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArray !== "up"){
+  if (finalTranscriptsArray !== "scroll" || finalTranscriptsArray !== "up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
     console.log("scroll");
-  } else if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArray !== "down"){
+  } else if (finalTranscriptsArray !== "scroll" || finalTranscriptsArray !== "down"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()+150
     }, 1000);
@@ -131,7 +131,7 @@ $("#control").click(function() {
       }
 */
  })
-});
+//});
 </script>
 
 </head>
