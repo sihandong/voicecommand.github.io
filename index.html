@@ -40,7 +40,7 @@ $("#catbutton").click(function() {
   } else if (potentialcommand =="click Google"){
     $("html").load("www.google.com");
     console.log("google");
-  } else if (foodornot ==0){
+  } else if (foodornot !== -1){
     $("#nugget").val(potentialcommand);
   } else if (potentialcommand =="scroll up"){
 
