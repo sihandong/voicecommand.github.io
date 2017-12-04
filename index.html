@@ -21,12 +21,12 @@ $("#catbutton").click(function() {
 
  	console.log(potentialcommand);
 
-  if (potentialcommand == "scroll down"){
+  if (potentialcommand == "scroll up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
     console.log("scroll");
-  } else if (potentialcommand =="scroll up"){
+  } else if (potentialcommand =="scroll down"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()+150
     }, 1000);
@@ -98,7 +98,7 @@ $("#catbutton").click(function() {
 <body>
 <p>
 <input type="button" value="click to use voice command" id="control"><br>
-<input type="text" id="command"><input type="button" value="Do something!" id="commandbutton"><br>
+<input type="text" id="command" class="simulation"><input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
 
 
 </p>
@@ -141,6 +141,9 @@ Expenses as material breeding insisted building to in. Continual so distrusts pr
 
   .control{
     font-size: 6em;
+  }
+  #simulation {
+    position: fixed;
   }
 </style>
 </html>
