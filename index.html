@@ -20,8 +20,9 @@ $("#catbutton").click(function() {
  	var potentialcommand = $("#command").val();
 
  	console.log(potentialcommand);
-  var commandarray = $.makeArray(potentialcommand);
-  commandarray = commandarray.split(" ");
+  //var commandarray = $.makeArray(potentialcommand);
+  var commandarray = [];
+  commandarray = potentialcommand.split(" ");
   console.log(commandarray);
   var foodornot = jQuery.inArray("food", commandarray);
   console.log(foodornot);
