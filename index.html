@@ -10,10 +10,9 @@
   
 $(document).ready(function() {
 
+var finalTranscripts = '';
 
 $("#control").click(function() {
- 
-  var finalTranscript = "";
 
   var r = document.getElementById('result');
   startConverting();
@@ -25,8 +24,6 @@ $("#control").click(function() {
           speechRecognizer.interimResults = true;
           speechRecognizer.lang = 'en-US';
           speechRecognizer.start();
-
-          var finalTranscripts = '';
 
           speechRecognizer.onresult = function(event){
             var interimTranscripts = '';
@@ -58,11 +55,12 @@ $("#control").click(function() {
   var commandarray = [];
   commandarray = potentialcommand.split(" ");
   console.log(commandarray);
+  var finalTranscriptsArray = finalTranscripts.split("");
   var foodornot = jQuery.inArray("food", commandarray);
   console.log(foodornot);
   
 
-  if (potentialcommand == "scroll up"){
+  if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArrayl !== "up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
