@@ -56,23 +56,25 @@ $("#control").click(function() {
   commandarray = potentialcommand.split(" ");
   console.log(commandarray);
   var finalTranscriptsArray = finalTranscripts.split("");
-  var foodornot = jQuery.inArray("food", commandarray);
+  var foodornot = jQuery.inArray("food", finalTranscriptsArray);
   console.log(foodornot);
   
 
-  if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArrayl !== "up"){
+  if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArray !== "up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
     console.log("scroll");
-  } else if (potentialcommand =="scroll down"){
+  } else if (finalTranscriptsArrayl !== "scroll" || finalTranscriptsArray !== "down"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()+150
     }, 1000);
+    console.log("scrolldown");
   } else if (potentialcommand =="click cat"){
     alert("meow");
   } else if (foodornot !== -1){
     $("#nugget").val(potentialcommand);
+    console.log("fud");
   } else if (potentialcommand =="scroll up"){
 
   }
