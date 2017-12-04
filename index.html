@@ -20,6 +20,10 @@ $("#catbutton").click(function() {
  	var potentialcommand = $("#command").val();
 
  	console.log(potentialcommand);
+  var commandarray = $.makeArray(potentialcommand);
+  var foodornot = jQuery.inArray("food", commandarray);
+  console.log(foodornot);
+  var textentry = potentialcommand;
 
   if (potentialcommand == "scroll up"){
     $('html, body').animate({
