@@ -33,8 +33,8 @@ $("#catbutton").click(function() {
   } else if (potentialcommand =="click Google"){
     $("html").load("www.google.com");
     console.log("google");
-  } else if (potentialcommand =="scroll up"){
-
+  } else if (potentialcommand =="enter chicken nugget"){
+    $("#nugget").val("chicken nugget");
   } else if (potentialcommand =="scroll up"){
 
   }
@@ -98,7 +98,9 @@ $("#catbutton").click(function() {
 <body>
 <p>
 <input type="button" value="click to use voice command" id="control"><br>
-<input type="text" id="command" class="simulation"><input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
+<span>simulation</span><input type="text" id="command" class="simulation"><input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
+
+<span>what's your favorite food?</span><input type="text" id="nugget"><br>
 
 
 </p>
