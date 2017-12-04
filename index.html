@@ -10,11 +10,14 @@
   
 $(document).ready(function() {
 
+
+$("#control").click(function() {
  
   var finalTranscript = "";
 
   var r = document.getElementById('result');
-
+  startConverting();
+  
       function startConverting () {
         if('webkitSpeechRecognition' in window){
           var speechRecognizer = new webkitSpeechRecognition();
@@ -45,7 +48,7 @@ $(document).ready(function() {
         }
       }
 
-  
+  })
 
  $("#commandbutton").click(function() {
  	var potentialcommand = $("#command").val();
@@ -134,7 +137,7 @@ $(document).ready(function() {
 </head>
 <body>
 <p>
-<input type="button" value="click to use voice command" id="control" onclick="startConverting();"><br>
+<input type="button" value="click to use voice command" id="control" ><br>
 <span class="simulation">simulation</span><input type="text" id="command" class="simulation"><br>
 <input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
 
