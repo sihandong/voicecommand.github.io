@@ -68,7 +68,9 @@ $("#control").click(function() {
             } 
             else if (enterornot !== -1){  
                $("#nugget").val(" ");
-               $("#nugget").val(potentialcommand);
+               var removeEnter = "enter";
+               transcriptsArray.splice($.inArray(itemtoRemove, transcriptsArray),1);
+               $("#nugget").val(transcriptsArray);
             } 
             //else if (foodornot !== -1){
             //   $("#nugget").val(potentialcommand);
@@ -172,7 +174,7 @@ $("#control").click(function() {
 <a href="cmu.edu">CMU</a><br>
 
 
-<span>
+<span id = "text">
 Entire any had depend and figure winter. Change stairs and men likely wisdom new happen piqued six. Now taken him timed sex world get. Enjoyed married an feeling delight pursuit as offered. As admire roused length likely played pretty to no. Means had joy miles her merry solid order. 
 
 Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing. 
@@ -194,7 +196,7 @@ Expenses as material breeding insisted building to in. Continual so distrusts pr
 
 </body>
 <style>
-  span {
+  #text {
     left: 20em;
     top: 20em;
     font-size: 2em;
