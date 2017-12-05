@@ -47,6 +47,9 @@ $("#control").click(function() {
 
   })
 
+
+
+
  //$("#commandbutton").click(function() {
  	var potentialcommand = $("#command").val();
 
@@ -58,7 +61,7 @@ $("#control").click(function() {
   var finalTranscriptsArray = finalTranscripts.split("");
   var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
   var foodornot = jQuery.inArray("food", finalTranscriptsArray);
-  console.log(finalTranscriptsArray);
+  console.log(finalTranscripts);
   
 
   if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
@@ -140,8 +143,6 @@ $("#control").click(function() {
 <p>
 <input type="button" value="click to use voice command" id="control" ><br>
 <div id = "result"></div>
-<span class="simulation">simulation</span><input type="text" id="command" class="simulation"><br>
-<input type="button" value="Do something!" id="commandbutton" class="simulation"><br>
 
 <span>what's your favorite food?</span><input type="text" id="nugget"><br>
 
