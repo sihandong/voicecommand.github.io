@@ -45,14 +45,14 @@ $("#control").click(function() {
             console.log(potentialcommand);
 
 
-            var transcriptsArray = transcript.split(" ");
+            var transcriptsArray = potentialcommand.split(" ");
             var scrollornot = jQuery.inArray("scroll", transcriptsArray)
             var foodornot = jQuery.inArray("food", transcriptsArray);
             var upornot = jQuery.inArray("up", transcriptsArray);
             var downornot = jQuery.inArray("down", transcriptsArray);
             var enterornot = jQuery.inArray("enter", transcriptsArray);
             
-            console.log(upornot);
+            console.log(enterornot);
             console.log(transcriptsArray);
 
             if (scrollornot !== -1 && upornot !== -1){
@@ -64,10 +64,10 @@ $("#control").click(function() {
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
-              console.log("scrolldown");
+              //console.log("scrolldown");
             } 
-            else if (enterornot !== -1){
-               s.innerHTML = transcript;
+            else if (enterornot !== -1){  
+               s.innerHTML = potentialcommand;
             } 
             //else if (foodornot !== -1){
             //   $("#nugget").val(potentialcommand);
