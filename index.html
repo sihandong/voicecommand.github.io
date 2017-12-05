@@ -22,7 +22,7 @@ $("#control").click(function() {
           var speechRecognizer = new webkitSpeechRecognition();
           speechRecognizer.continuous = true;
           speechRecognizer.interimResults = true;
-          speechRecognizer.lang = 'zh-CN';
+          speechRecognizer.lang = 'en-US';
           speechRecognizer.start();
 
           speechRecognizer.onresult = function(event){
@@ -54,13 +54,14 @@ $("#control").click(function() {
   //var commandarray = $.makeArray(potentialcommand);
   var commandarray = [];
   commandarray = potentialcommand.split(" ");
-  console.log(commandarray);
+  //console.log(commandarray);
   var finalTranscriptsArray = finalTranscripts.split("");
+  var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
   var foodornot = jQuery.inArray("food", finalTranscriptsArray);
-  console.log(foodornot);
+  //console.log(foodornot);
   
 
-  if (finalTranscriptsArray !== "scroll" || finalTranscriptsArray !== "up"){
+  if (scrollornot !== -1 || finalTranscriptsArray !== "up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
