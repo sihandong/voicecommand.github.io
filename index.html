@@ -22,7 +22,7 @@ $("#control").click(function() {
           var speechRecognizer = new webkitSpeechRecognition();
           speechRecognizer.continuous = true;
           speechRecognizer.interimResults = true;
-          speechRecognizer.lang = 'en-US';
+          speechRecognizer.lang = 'es-US';
           speechRecognizer.start();
 
           speechRecognizer.onresult = function(event){
