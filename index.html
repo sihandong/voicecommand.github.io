@@ -61,12 +61,12 @@ $("#control").click(function() {
   //console.log(foodornot);
   
 
-  if (scrollornot !== -1 || finalTranscriptsArray !== "up"){
+  if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
     }, 1000);
     console.log("scroll");
-  } else if (finalTranscriptsArray !== "scroll" || finalTranscriptsArray !== "down"){
+  } else if (scrollornot !== -1 && finalTranscriptsArray !== "down"){
     $('html, body').animate({
         scrollTop: $(document).scrollTop()+150
     }, 1000);
