@@ -59,6 +59,7 @@ $("#control").click(function() {
             var downornot = jQuery.inArray("down", transcriptsArray);
             var enterornot = jQuery.inArray("enter", transcriptsArray);
             var clickornot = jQuery.inArray("click", transcriptsArray);
+            var catornot = jQuery.inArray("cat", transcriptsArray);
             
             console.log(transcriptsArray);
 
@@ -91,7 +92,8 @@ $("#control").click(function() {
                $("#nugget").val(enterText);
             } 
             //click cat button
-            else if (clickornot !== -1){
+            else if (clickornot !== -1 && catornot !== -1){
+              $("#error").hide();
               alert("meow");
             }
             // error message
