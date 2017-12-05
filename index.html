@@ -10,7 +10,7 @@
   
 $(document).ready(function() {
 
-var finalTranscripts = '';
+var transcripts = '';
 var potentialcommand = '';
 
 $("#control").click(function() {
@@ -32,25 +32,25 @@ $("#control").click(function() {
               var transcript = event.results[i][0].transcript;
               transcript.replace("\n", "<br>");
               if(event.results[i].isFinal){
-                finalTranscripts += transcript;
+                transcripts += transcript;
                 potentialcommand = transcript;
               }else{
                 interimTranscripts += transcript;
               }
             }
-            r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+            r.innerHTML = transcripts + '<span style="color:#999">' + interimTranscripts + '</span>';
             
             console.log(potentialcommand);
 
 
-            var finalTranscriptsArray = finalTranscripts.split(" ");
-            var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
-            var foodornot = jQuery.inArray("food", finalTranscriptsArray);
-            var upornot = jQuery.inArray("up", finalTranscriptsArray);
-            var downornot = jQuery.inArray("down", finalTranscriptsArray);
+            var transcriptsArray = transcripts.split(" ");
+            var scrollornot = jQuery.inArray("scroll", transcriptsArray)
+            var foodornot = jQuery.inArray("food", transcriptsArray);
+            var upornot = jQuery.inArray("up", transcriptsArray);
+            var downornot = jQuery.inArray("down", transcriptsArray);
             
             console.log(upornot);
-            console.log(finalTranscriptsArray);
+            console.log(transcriptsArray);
 
             if (scrollornot !== -1 && upornot !== -1){
               $('body').animate({
