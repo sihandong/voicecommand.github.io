@@ -40,6 +40,36 @@ $("#control").click(function() {
             r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
             potentialcommand = finalTranscripts;
             console.log(potentialcommand);
+
+            
+            var finalTranscriptsArray = finalTranscripts.split("");
+            var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
+            var foodornot = jQuery.inArray("food", finalTranscriptsArray);
+            
+            console.log(potentialcommand);
+
+            if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
+              $('html, body').animate({
+                  scrollTop: $(document).scrollTop()-150
+              }, 1000);
+              console.log("scroll");
+            } else if (scrollornot !== -1 && finalTranscriptsArray !== "down"){
+              $('html, body').animate({
+                  scrollTop: $(document).scrollTop()+150
+              }, 1000);
+              console.log("scrolldown");
+            } 
+            // else if (potentialcommand =="click cat"){
+            //   alert("meow");
+            // } else if (foodornot !== -1){
+            //   $("#nugget").val(potentialcommand);
+            //   console.log("fud");
+            // } else if (potentialcommand =="scroll up"){
+
+            // }
+            else {
+              alert("not a valid command");
+            } 
           };
           speechRecognizer.onerror = function (event) {
           };
@@ -49,34 +79,6 @@ $("#control").click(function() {
       }
 
 
-  var finalTranscriptsArray = finalTranscripts.split("");
-  var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
-  var foodornot = jQuery.inArray("food", finalTranscriptsArray);
-  
-  console.log(potentialcommand);
-
-  if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
-    $('html, body').animate({
-        scrollTop: $(document).scrollTop()-150
-    }, 1000);
-    console.log("scroll");
-  } else if (scrollornot !== -1 && finalTranscriptsArray !== "down"){
-    $('html, body').animate({
-        scrollTop: $(document).scrollTop()+150
-    }, 1000);
-    console.log("scrolldown");
-  } 
-  // else if (potentialcommand =="click cat"){
-  //   alert("meow");
-  // } else if (foodornot !== -1){
-  //   $("#nugget").val(potentialcommand);
-  //   console.log("fud");
-  // } else if (potentialcommand =="scroll up"){
-
-  // }
-  else {
-    alert("not a valid command");
-  }   
   })
 
 
