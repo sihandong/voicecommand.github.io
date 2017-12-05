@@ -38,7 +38,7 @@ $("#control").click(function() {
                 interimTranscripts += transcript;
               }
             }
-            r.innerHTML = transcripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+            //r.innerHTML = transcripts + '<span style="color:#999">' + interimTranscripts + '</span>';
             
             console.log(potentialcommand);
 
@@ -48,6 +48,7 @@ $("#control").click(function() {
             var foodornot = jQuery.inArray("food", transcriptsArray);
             var upornot = jQuery.inArray("up", transcriptsArray);
             var downornot = jQuery.inArray("down", transcriptsArray);
+            var enterornot = jQuery.inArray("enter", transcriptsArray);
             
             console.log(upornot);
             console.log(transcriptsArray);
@@ -63,9 +64,10 @@ $("#control").click(function() {
               }, 1000);
               console.log("scrolldown");
             } 
-            // else if (potentialcommand =="click cat"){
-            //   alert("meow");
-            // } else if (foodornot !== -1){
+            else if (enterornot !== -1){
+               r.innerHTML = transcripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+            } 
+            //else if (foodornot !== -1){
             //   $("#nugget").val(potentialcommand);
             //   console.log("fud");
             // } else if (potentialcommand =="scroll up"){
