@@ -52,7 +52,6 @@ $("#control").click(function() {
             var downornot = jQuery.inArray("down", transcriptsArray);
             var enterornot = jQuery.inArray("enter", transcriptsArray);
             
-            console.log(enterornot);
             console.log(transcriptsArray);
 
             if (scrollornot !== -1 && upornot !== -1){
@@ -72,6 +71,8 @@ $("#control").click(function() {
                transcriptsArray.splice($.inArray(removeEnter, transcriptsArray),1);
                var enterText = transcriptsArray.toString();
                enterText = enterText.replace(",", " ");
+               console.log(enterText);
+
                $("#nugget").val(transcriptsArray);
             } 
             //else if (foodornot !== -1){
