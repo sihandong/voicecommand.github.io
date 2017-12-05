@@ -47,12 +47,13 @@ $("#control").click(function() {
             var foodornot = jQuery.inArray("food", finalTranscriptsArray);
             
             console.log(scrollornot);
+            console.log(finalTranscriptsArray);
 
             if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
               $('html, body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
-              console.log("scroll");
+              console.log("scrollup");
             } else if (scrollornot !== -1 && finalTranscriptsArray !== "down"){
               $('html, body').animate({
                   scrollTop: $(document).scrollTop()+150
