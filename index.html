@@ -11,6 +11,7 @@
 $(document).ready(function() {
 
 var finalTranscripts = '';
+var potentialcommand = '';
 
 $("#control").click(function() {
 
@@ -37,7 +38,8 @@ $("#control").click(function() {
               }
             }
             r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
-            console.log(finalTranscripts);
+            potentialcommand = finalTranscripts;
+            
           };
           speechRecognizer.onerror = function (event) {
           };
@@ -62,9 +64,8 @@ $("#control").click(function() {
   var finalTranscriptsArray = finalTranscripts.split("");
   var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
   var foodornot = jQuery.inArray("food", finalTranscriptsArray);
-  console.log(finalTranscripts);
-  console.log("running");
   
+  console.log(potentialcommand);
 
   if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
     $('html, body').animate({
