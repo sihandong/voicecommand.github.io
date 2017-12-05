@@ -39,7 +39,7 @@ $("#control").click(function() {
             }
             r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
             potentialcommand = finalTranscripts;
-            
+            console.log(potentialcommand);
           };
           speechRecognizer.onerror = function (event) {
           };
