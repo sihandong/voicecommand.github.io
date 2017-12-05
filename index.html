@@ -41,12 +41,12 @@ $("#control").click(function() {
             potentialcommand = finalTranscripts;
             console.log(potentialcommand);
 
-            
+
             var finalTranscriptsArray = finalTranscripts.split("");
             var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
             var foodornot = jQuery.inArray("food", finalTranscriptsArray);
             
-            console.log(potentialcommand);
+            console.log(scrollornot);
 
             if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
               $('html, body').animate({
@@ -68,8 +68,8 @@ $("#control").click(function() {
 
             // }
             else {
-              alert("not a valid command");
-            } 
+              //alert("not a valid command");
+            };
           };
           speechRecognizer.onerror = function (event) {
           };
