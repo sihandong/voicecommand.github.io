@@ -53,12 +53,12 @@ $("#control").click(function() {
             console.log(transcriptsArray);
 
             if (scrollornot !== -1 && upornot !== -1){
-              $('body').animate({
+              $('html,body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
               console.log("scrollup");
             } else if (scrollornot !== -1 && downornot !== -1){
-              $('body').animate({
+              $('html,body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
               console.log("scrolldown");
