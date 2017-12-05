@@ -13,6 +13,7 @@ $(document).ready(function() {
 var finalTranscripts ='';
 var potentialcommand = '';
 $("#error").hide();
+$("#smoothie").hide();
 
 
 $("catbutton").click(function(){
@@ -23,7 +24,6 @@ $("catbutton").click(function(){
 $("#control").click(function() {
 
   var r = document.getElementById('result');
-  var s = document.getElementById('nugget');
 
   startConverting();
 
@@ -74,6 +74,7 @@ $("#control").click(function() {
             //scroll down
             else if (scrollornot !== -1 && downornot !== -1){
               $("#error").hide();
+              $("#smoothie").hide();
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
@@ -82,6 +83,7 @@ $("#control").click(function() {
             //enter something
             else if (enterornot !== -1){  
                $("#error").hide();
+               $("#smoothie").hide();
                $("#nugget").val(" ");
                var removeEnter = "enter";
                transcriptsArray.splice($.inArray(removeEnter, transcriptsArray),1);
@@ -94,10 +96,11 @@ $("#control").click(function() {
             //click cat button
             else if (clickornot !== -1 && catornot !== -1){
               $("#error").hide();
-              alert("meow");
+              $("#smoothie").show();
             }
             // error message
             else {
+              $("#smoothie").hide();
               $("#error").show();
             };
           };
@@ -192,6 +195,7 @@ $("#control").click(function() {
 
 <p>
 <input type="button" value="cat - click me for meow" id = "catbutton"><br>
+<img id = "smoothie" src="https://i.pinimg.com/736x/51/d6/e3/51d6e3dcccd3bdac300202a5a3e99de0--pretty-cats-beautiful-cats.jpg" alt="beautiful cat"><br>
 <br>
 <br>
 
@@ -234,6 +238,7 @@ Expenses as material breeding insisted building to in. Continual so distrusts pr
     font-size: 6em;
   }
   #result{
+    position:fixed;
     height : 100px;
     border : 1px solid #ccc;
   }
