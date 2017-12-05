@@ -54,17 +54,21 @@ $("#control").click(function() {
             
             console.log(transcriptsArray);
 
+            //scroll up
             if (scrollornot !== -1 && upornot !== -1){
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
               console.log("scrollup");
-            } else if (scrollornot !== -1 && downornot !== -1){
+            }
+            //scroll down
+            else if (scrollornot !== -1 && downornot !== -1){
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
               //console.log("scrolldown");
-            } 
+            }
+            //enter something
             else if (enterornot !== -1){  
                $("#nugget").val(" ");
                var removeEnter = "enter";
@@ -75,14 +79,9 @@ $("#control").click(function() {
 
                $("#nugget").val(enterText);
             } 
-            //else if (foodornot !== -1){
-            //   $("#nugget").val(potentialcommand);
-            //   console.log("fud");
-            // } else if (potentialcommand =="scroll up"){
-
-            // }
+            // error message
             else {
-              //alert("not a valid command");
+              alert("not a valid command");
             };
           };
           speechRecognizer.onerror = function (event) {
