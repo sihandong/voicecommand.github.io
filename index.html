@@ -57,6 +57,7 @@ $("#control").click(function() {
 
             //scroll up
             if (scrollornot !== -1 && upornot !== -1){
+              $("#error").hide();
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
@@ -64,6 +65,7 @@ $("#control").click(function() {
             }
             //scroll down
             else if (scrollornot !== -1 && downornot !== -1){
+              $("#error").hide();
               $('html,body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
@@ -71,6 +73,7 @@ $("#control").click(function() {
             }
             //enter something
             else if (enterornot !== -1){  
+               $("#error").hide();
                $("#nugget").val(" ");
                var removeEnter = "enter";
                transcriptsArray.splice($.inArray(removeEnter, transcriptsArray),1);
