@@ -45,16 +45,18 @@ $("#control").click(function() {
             var finalTranscriptsArray = finalTranscripts.split(" ");
             var scrollornot = jQuery.inArray("scroll", finalTranscriptsArray)
             var foodornot = jQuery.inArray("food", finalTranscriptsArray);
+            var upornot = jQuery.inArray("up", finalTranscriptsArray);
+            var downornot = jQuery.inArray("down", finalTranscriptsArray);
             
             console.log(scrollornot);
             console.log(finalTranscriptsArray);
 
-            if (scrollornot !== -1 && finalTranscriptsArray !== "up"){
+            if (scrollornot !== -1 && upornot !== -1){
               $('html, body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
               console.log("scrollup");
-            } else if (scrollornot !== -1 && finalTranscriptsArray !== "down"){
+            } else if (scrollornot !== -1 && downornot !== -1){
               $('html, body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
