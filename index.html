@@ -33,12 +33,13 @@ $("#control").click(function() {
               transcript.replace("\n", "<br>");
               if(event.results[i].isFinal){
                 finalTranscripts += transcript;
+                potentialcommand = transcript;
               }else{
                 interimTranscripts += transcript;
               }
             }
             r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
-            potentialcommand = finalTranscripts;
+            
             console.log(potentialcommand);
 
 
@@ -52,12 +53,12 @@ $("#control").click(function() {
             console.log(finalTranscriptsArray);
 
             if (scrollornot !== -1 && upornot !== -1){
-              $('html, body').animate({
+              $('body').animate({
                   scrollTop: $(document).scrollTop()-150
               }, 1000);
               console.log("scrollup");
             } else if (scrollornot !== -1 && downornot !== -1){
-              $('html, body').animate({
+              $('body').animate({
                   scrollTop: $(document).scrollTop()+150
               }, 1000);
               console.log("scrolldown");
